@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 import folium
 import sys
-sys.path.append('D:/Files/2020交通科技大赛/demo/')
+sys.path.append('templates/static/code/')
 from draw_map import map
 from origins import origin
 from single_share import single
