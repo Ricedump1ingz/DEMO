@@ -9,7 +9,7 @@ import sys
 os.environ['PROJ_LIB'] = os.path.dirname(sys.argv[0])
 
 def origin():
-    ori = gpd.read_file('D:/Files/2020交通科技大赛/demo/ori2.gpkg')
+    ori = gpd.read_file('data/ori2.gpkg')
     m2 = folium.Map(zoom_start=10,
                     tiles='http://map.geoq.cn/ArcGIS/rest/services/ChinaOnlineStreetGray/MapServer/tile/{z}/{y}/{x}',
                     attr= '灰色版',
