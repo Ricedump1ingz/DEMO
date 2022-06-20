@@ -1,0 +1,10 @@
+{% extends "share_route.html" %}
+{% load static %}
+<!doctype html>
+<html>
+    {% block map %}
+        <div class="col-lg-10">
+            {{m2 | safe}}
+        </div>
+    {% endblock %}
+</html>

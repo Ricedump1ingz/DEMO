@@ -1,0 +1,149 @@
+{% extends "base.html" %}
+{% load static %}
+<!doctype html>
+{% block content %}
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+  <h3>派单系统</h3>
+</div>
+<html lang="zh">
+      <div class="row">
+          {% block map %}
+          <div class="col-lg-10">
+              {{m | safe}}
+          </div>
+          {% endblock %}
+          <div class="col-lg-2">
+              <div class="container-fluid">
+                <a href="/map_orders" class="btn btn-primary btn-icon-split">
+                  <span class="icon text-white-50">
+                      <i class="fas fa-flag"></i>
+                  </span>
+                  <span class="text">查看订单</span>
+                </a>
+              </div>
+              <br>
+              <div class="container-fluid">
+                <a href="/single_share" class="btn btn-primary btn-icon-split">
+                  <span class="icon text-white-50">
+                      <i class="fas fa-flag"></i>
+                  </span>
+                  <span class="text">合乘匹配</span>
+                </a>
+              </div>
+              <br>
+              <div class="container-fluid">
+                <a href="/share_route" class="btn btn-primary btn-icon-split">
+                  <span class="icon text-white-50">
+                      <i class="fas fa-flag"></i>
+                  </span>
+                  <span class="text">行程发布</span>
+                </a>
+              </div>
+          </div>
+      </div>
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h3>订单列表</h3>
+      </div>
+        <div><h5>合乘订单</h5></div>
+        <div class="table-responsive">
+          <table class="table table-striped table-sm">
+            <thead>
+              <tr>
+                <th>序号</th>
+                <th>订单1</th>
+                <th>订单2</th>
+                <th>预计行驶距离(km)</th>
+                <th>减排概率</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1,001</td>
+                <td>uFEpimg0iwcsm6qxnoJIsnoq_ssjxmbl</td>
+                <td>lKxmuim3urgwu3mAtAECqjnn3kslozan</td>
+                <td>7.5</td>
+                <td>0.75</td>
+              </tr>
+              <tr>
+                <td>1,002</td>
+                <td>sDxsokn7pnjkl_qxsAzIgnjp.rycvz6o</td>
+                <td>nBJgotk3mscqv4grqsEylnfg.soouo0c</td>
+                <td>12.3</td>
+                <td>0.68</td>
+              </tr>
+              <tr>
+                <td>1,003</td>
+                <td>mCEfpghbrwpnA5pAqqxKujll0iyowoah</td>
+                <td>nBDijupajBcpmbiByowIsjjr3pmnpv8l</td>
+                <td>10.8</td>
+                <td>0.91</td>
+              </tr>
+              <tr>
+                <td>1,004</td>
+                <td>sJxkjhq_gmfuw9pCrtGzknrr8nqlws2n</td>
+                <td>uDxgkql4pqkit2ersmBHgmqp7hzlno9d</td>
+                <td>6.3</td>
+                <td>0.94</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div><h5>快车订单</h5></div>
+        <div class="table-responsive">
+          <table class="table table-striped table-sm">
+            <thead>
+              <tr>
+                <th>序号</th>
+                <th>订单编号</th>
+                <th>预计行驶距离(km)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2,001</td>
+                <td>qKLiuiq.hyjvt1mtxxBzkfkl7mBcjv-l</td>
+                <td>5.4</td>
+              </tr>
+              <tr>
+                <td>2,002</td>
+                <td>oECiunn_jogqm7gvwoxFgutkakomlm0n</td>
+                <td>6.7</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div><h5>候选订单池</h5></div>
+        <div class="table-responsive">
+          <table class="table table-striped table-sm">
+            <thead>
+              <tr>
+                <th>序号</th>
+                <th>订单编号</th>
+                <th>预计行驶距离(km)</th>
+                <th>距离截止时间(min)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>3,001</td>
+                <td>yGCugum2vvfirakCpsHItnil1gBjws7f</td>
+                <td>5.2</td>
+                <td>2</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    </main>
+  </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+        <script src="{% static 'js/dashboard.js' %}"></script>
+  </body>
+</html>
+{% endblock %}
