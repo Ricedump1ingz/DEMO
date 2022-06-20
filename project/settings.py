@@ -26,7 +26,9 @@ SECRET_KEY = 'django-insecure-2_4^qml_tu#*!3m_8=n&s$5p^7&6khirweaoyh1!fu-5-a&eq*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'ricedumplings.pythonanywhere.com',
+]
 
 
 # Application definition
