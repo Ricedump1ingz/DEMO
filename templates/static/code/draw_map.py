@@ -9,12 +9,12 @@ os.environ['PROJ_LIB'] = os.path.dirname(sys.argv[0])
 
 def map():
     #读取轨迹文件
-    straj = gpd.read_file('D:/Files/2020交通科技大赛/demo/straj2.gpkg')
+    straj = gpd.read_file('data/straj2.gpkg')
     #O点和D点
-    ori = gpd.read_file('D:/Files/2020交通科技大赛/demo/ori2.gpkg')
-    des = gpd.read_file('D:/Files/2020交通科技大赛/demo/des2.gpkg')
+    ori = gpd.read_file('data/ori2.gpkg')
+    des = gpd.read_file('data/des2.gpkg')
     #订单信息以及各参数
-    orders = pd.read_csv('D:/Files/2020交通科技大赛/demo/share_map.csv',sep = ',')
+    orders = pd.read_csv('data/share_map.csv',sep = ',')
 
     def subtable(order2):
         sub = order2.iloc[0]
